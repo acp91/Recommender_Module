@@ -68,7 +68,7 @@ def find_similar_movies(movie_id, movies_df):
     similar_idxs = np.where(dot_prod_movies[movie_idx] == np.max(dot_prod_movies[movie_idx]))[0]
 
     # pull the movie titles based on the indices
-    similar_movies = np.array(movies_df.iloc[similar_idxs, ]['movie'])
+    similar_movies = np.array(movies_df.iloc[similar_idxs, ]['movie_id'])
 
     return similar_movies
 
